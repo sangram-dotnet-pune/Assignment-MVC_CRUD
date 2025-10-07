@@ -1,0 +1,30 @@
+﻿@model List<Assignment_MVC_CURD.Models.Product>
+
+<h2>All Products</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+                <td>
+                    <a href="/Product/DisplayProductById/@p.Id">View</a> |
+                    <a href="/Product/UpdateProductPrice/@p.Id">Update</a> |
+                    <a href="/Product/DeleteProduct/@p.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Product/AddNewProduct">Add New Product</a>

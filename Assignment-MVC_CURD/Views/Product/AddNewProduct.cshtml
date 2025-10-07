@@ -1,0 +1,17 @@
+﻿@model Assignment_MVC_CURD.Models.Product
+
+<h2>Add New Product</h2>
+
+<form asp-action="AddNewProduct" method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div>
+        <label>Price:</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Add</button>
+</form>
+
+<a href="/Product/DisplayAllProducts">Back to List</a>
